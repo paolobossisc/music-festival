@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300">
+  <defs>
+    <linearGradient id="notte" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2b1055"/>
+      <stop offset="1" stop-color="#17172a"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="300" fill="url(#notte)"/>
+  <!-- luna e stelle -->
+  <circle cx="690" cy="55" r="30" fill="#ffd9c9" opacity="0.9"/>
+  <circle cx="700" cy="48" r="30" fill="#2b1055"/>
+  <circle cx="120" cy="40" r="3" fill="#ffffff"/>
+  <circle cx="260" cy="70" r="2.5" fill="#ffffff"/>
+  <circle cx="420" cy="35" r="3" fill="#ffffff"/>
+  <circle cx="560" cy="80" r="2.5" fill="#ffffff"/>
+  <!-- fuochi d'artificio -->
+  <g stroke-width="4" stroke-linecap="round">
+    <g stroke="#ff7a45">
+      <line x1="200" y1="60" x2="200" y2="30"/>
+      <line x1="200" y1="60" x2="175" y2="45"/>
+      <line x1="200" y1="60" x2="225" y2="45"/>
+      <line x1="200" y1="60" x2="182" y2="75"/>
+      <line x1="200" y1="60" x2="218" y2="75"/>
+    </g>
+    <g stroke="#7597de">
+      <line x1="500" y1="45" x2="500" y2="20"/>
+      <line x1="500" y1="45" x2="480" y2="32"/>
+      <line x1="500" y1="45" x2="520" y2="32"/>
+      <line x1="500" y1="45" x2="486" y2="58"/>
+      <line x1="500" y1="45" x2="514" y2="58"/>
+    </g>
+  </g>
+  <!-- fasci di luce -->
+  <polygon points="400,95 330,255 470,255" fill="#ff9a6c" opacity="0.25"/>
+  <polygon points="250,95 190,255 330,255" fill="#7597de" opacity="0.22"/>
+  <polygon points="550,95 470,255 610,255" fill="#ffd9c9" opacity="0.20"/>
+  <!-- palco -->
+  <rect x="150" y="180" width="500" height="16" rx="6" fill="#0d0d16"/>
+  <rect x="330" y="120" width="140" height="60" rx="8" fill="#0d0d16"/>
+  <text x="400" y="158" font-family="Arial" font-size="26" font-weight="bold" fill="#ff7a45" text-anchor="middle">MF</text>
+  <!-- pubblico -->
+  <g fill="#0d0d16">
+    <circle cx="90" cy="230" r="17"/>
+    <circle cx="160" cy="238" r="17"/>
+    <circle cx="240" cy="230" r="17"/>
+    <circle cx="320" cy="240" r="17"/>
+    <circle cx="400" cy="232" r="17"/>
+    <circle cx="480" cy="241" r="17"/>
+    <circle cx="560" cy="230" r="17"/>
+    <circle cx="640" cy="238" r="17"/>
+    <circle cx="710" cy="231" r="17"/>
+    <rect x="73" y="245" width="34" height="55" rx="10"/>
+    <rect x="143" y="253" width="34" height="47" rx="10"/>
+    <rect x="223" y="245" width="34" height="55" rx="10"/>
+    <rect x="303" y="255" width="34" height="45" rx="10"/>
+    <rect x="383" y="247" width="34" height="53" rx="10"/>
+    <rect x="463" y="256" width="34" height="44" rx="10"/>
+    <rect x="543" y="245" width="34" height="55" rx="10"/>
+    <rect x="623" y="253" width="34" height="47" rx="10"/>
+    <rect x="693" y="246" width="34" height="54" rx="10"/>
+  </g>
+  <!-- mani alzate -->
+  <g stroke="#0d0d16" stroke-width="7" stroke-linecap="round">
+    <line x1="95" y1="248" x2="85" y2="210"/>
+    <line x1="405" y1="250" x2="415" y2="212"/>
+    <line x1="565" y1="248" x2="556" y2="208"/>
+    <line x1="715" y1="249" x2="725" y2="212"/>
+  </g>
+  <!-- note -->
+  <text x="330" y="105" font-size="26" fill="#ffd9c9">&#9834;</text>
+  <text x="470" y="100" font-size="22" fill="#ff9a6c">&#9835;</text>
+</svg>
