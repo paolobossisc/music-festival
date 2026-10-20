@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Festival - Artisti</title>
+  <style>
+/* Music Festival - Gruppo 2 - style.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #101018;
+  color: #f2f2f2;
+  line-height: 1.6;
+}
+
+a {
+  color: #ff7a45;
+}
+
+/* Header e navigazione */
+header {
+  background: #17172a;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.logo {
+  font-size: 1.3rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.logo span {
+  color: #ff7a45;
+}
+
+nav a {
+  color: #f2f2f2;
+  text-decoration: none;
+  margin-left: 18px;
+  font-size: 0.95rem;
+}
+
+nav a:hover {
+  color: #ff7a45;
+}
+
+/* Hero della home */
+.hero {
+  text-align: center;
+  padding: 70px 20px;
+  background: linear-gradient(135deg, #2b1055 0%, #7597de 100%);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  letter-spacing: 4px;
+}
+
+.hero p {
+  margin: 12px 0 24px;
+  letter-spacing: 3px;
+  color: #ffd9c9;
+}
+
+.btn {
+  display: inline-block;
+  background: #ff7a45;
+  color: #101018;
+  padding: 12px 26px;
+  border-radius: 24px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background: #ff9a6c;
+}
+
+/* Griglia delle sezioni */
+.griglia {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  padding: 48px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.card {
+  background: #17172a;
+  border-radius: 12px;
+  padding: 24px;
+  width: 300px;
+  text-align: center;
+  text-decoration: none;
+  color: #f2f2f2;
+  border: 1px solid #2c2c45;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: #ff7a45;
+}
+
+.card .emoji {
+  font-size: 2.5rem;
+}
+
+.card h2 {
+  margin: 12px 0 6px;
+  font-size: 1.3rem;
+}
+
+.card p {
+  color: #b8b8cc;
+  font-size: 0.95rem;
+}
+
+/* Pagine delle sezioni */
+.contenuto {
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 40px 20px 60px;
+}
+
+.contenuto h1 {
+  font-size: 2.2rem;
+  margin-bottom: 8px;
+}
+
+.sottotitolo {
+  color: #ff9a6c;
+  letter-spacing: 2px;
+  margin-bottom: 24px;
+}
+
+.immagine {
+  width: 100%;
+  max-height: 280px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 28px;
+}
+
+.contenuto h2 {
+  margin: 30px 0 12px;
+  color: #ffb08a;
+}
+
+/* Schede artisti */
+.artisti {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.artista {
+  background: #17172a;
+  border: 1px solid #2c2c45;
+  border-radius: 12px;
+  padding: 20px;
+  width: 270px;
+}
+
+.artista .foto {
+  font-size: 2.2rem;
+}
+
+.artista h3 {
+  margin: 8px 0 4px;
+}
+
+.artista .genere {
+  color: #ff7a45;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
+
+.artista p {
+  margin-top: 8px;
+  font-size: 0.92rem;
+  color: #b8b8cc;
+}
+
+/* Programma */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #17172a;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+caption {
+  text-align: left;
+  font-weight: bold;
+  font-size: 1.15rem;
+  color: #ffb08a;
+  padding: 14px 0 8px;
+}
+
+th,
+td {
+  padding: 12px 14px;
+  text-align: left;
+  border-bottom: 1px solid #2c2c45;
+  font-size: 0.95rem;
+}
+
+th {
+  background: #22223a;
+  color: #ffd9c9;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+/* Biglietti */
+.biglietti {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.biglietto {
+  background: #17172a;
+  border: 1px solid #2c2c45;
+  border-radius: 12px;
+  padding: 22px;
+  width: 260px;
+}
+
+.biglietto.destacato {
+  border-color: #ff7a45;
+}
+
+.biglietto h3 {
+  margin-bottom: 6px;
+}
+
+.prezzo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ff7a45;
+}
+
+.biglietto ul {
+  margin-top: 12px;
+  padding-left: 18px;
+  color: #b8b8cc;
+  font-size: 0.92rem;
+}
+
+.info {
+  background: #17172a;
+  border-left: 4px solid #ff7a45;
+  border-radius: 8px;
+  padding: 18px 20px;
+  margin-bottom: 16px;
+}
+
+.info h3 {
+  margin-bottom: 6px;
+}
+
+/* Link di ritorno e footer */
+.torna-home {
+  display: inline-block;
+  margin-top: 30px;
+  color: #ff7a45;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.torna-home:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background: #17172a;
+  text-align: center;
+  padding: 20px;
+  color: #8888a0;
+  font-size: 0.9rem;
+}
+</style>
+</head>
+<body>
+
+  <header>
+    <a class="logo" href="index.html">MUSIC <span>FESTIVAL</span></a>
+    <nav>
+      <a href="sezione-a.html">Artisti</a>
+      <a href="sezione-b.html">Programma</a>
+      <a href="sezione-c.html">Biglietti</a>
+    </nav>
+  </header>
+
+  <main class="contenuto">
+    <h1>Artisti</h1>
+    <p class="sottotitolo">6 SCHEDDE ARTISTI</p>
+
+    <img class="immagine" src="img/artisti.svg" alt="Illustrazione artisti sul palco">
+
+    <div class="artisti">
+      <article class="artista">
+        <div class="foto">&#127908;</div>
+        <h3>The Neon Waves</h3>
+        <p class="genere">INDIE ROCK</p>
+        <p>Band di Milano, chitarre energiche e ritornelli indimenticabili. Titolo del nuovo album: "Afterglow".</p>
+      </article>
+
+      <article class="artista">
+        <div class="foto">&#129304;</div>
+        <h3>DJ Aurora</h3>
+        <p class="genere">ELETTRONICA</p>
+        <p>Set notturni con remix originali e luci al laser. Da ascoltare assolutamente nel Palco Notte.</p>
+      </article>
+
+      <article class="artista">
+        <div class="foto">&#127925;</div>
+        <h3>Valentina Blues</h3>
+        <p class="genere">BLUES</p>
+        <p>Voce potente e armonica esplosiva, tra classici del blues e brani inediti scritti da lei.</p>
+      </article>
+
+      <article class="artista">
+        <div class="foto">&#129309;</div>
+        <h3>Kora Sound</h3>
+        <p class="genere">AFROBEAT</p>
+        <p>Percussioni africane e basso profondo: un ballo continuo per tutto il concerto.</p>
+      </article>
+
+      <article class="artista">
+        <div class="foto">&#127908;</div>
+        <h3>Luca Marina</h3>
+        <p class="genere">CANTAUTORATO</p>
+        <p>Chitarra acustica e storie di città: il momento intimo del festival al Palco Sunset.</p>
+      </article>
+
+      <article class="artista">
+        <div class="foto">&#127926;</div>
+        <h3>Rhythm Quartet</h3>
+        <p class="genere">JAZZ</p>
+        <p>Quattro musicisti esperti, improvvisazione dal vivo e standard riproposti in chiave moderna.</p>
+      </article>
+    </div>
+
+    <a class="torna-home" href="index.html">&larr; Torna alla home</a>
+  </main>
+
+  <footer>
+    Music Festival &copy; 2026 &mdash; Progetto gruppo 2 &middot; TPSIT 5AI
+  </footer>
+
+</body>
+</html>
