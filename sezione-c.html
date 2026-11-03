@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Festival - Biglietti</title>
+  <style>
+/* Music Festival - Gruppo 2 - style.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #101018;
+  color: #f2f2f2;
+  line-height: 1.6;
+}
+
+a {
+  color: #ff7a45;
+}
+
+/* Header e navigazione */
+header {
+  background: #17172a;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.logo {
+  font-size: 1.3rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.logo span {
+  color: #ff7a45;
+}
+
+nav a {
+  color: #f2f2f2;
+  text-decoration: none;
+  margin-left: 18px;
+  font-size: 0.95rem;
+}
+
+nav a:hover {
+  color: #ff7a45;
+}
+
+/* Hero della home */
+.hero {
+  text-align: center;
+  padding: 70px 20px;
+  background: linear-gradient(135deg, #2b1055 0%, #7597de 100%);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  letter-spacing: 4px;
+}
+
+.hero p {
+  margin: 12px 0 24px;
+  letter-spacing: 3px;
+  color: #ffd9c9;
+}
+
+.btn {
+  display: inline-block;
+  background: #ff7a45;
+  color: #101018;
+  padding: 12px 26px;
+  border-radius: 24px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background: #ff9a6c;
+}
+
+/* Griglia delle sezioni */
+.griglia {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  padding: 48px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.card {
+  background: #17172a;
+  border-radius: 12px;
+  padding: 24px;
+  width: 300px;
+  text-align: center;
+  text-decoration: none;
+  color: #f2f2f2;
+  border: 1px solid #2c2c45;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: #ff7a45;
+}
+
+.card .emoji {
+  font-size: 2.5rem;
+}
+
+.card h2 {
+  margin: 12px 0 6px;
+  font-size: 1.3rem;
+}
+
+.card p {
+  color: #b8b8cc;
+  font-size: 0.95rem;
+}
+
+/* Pagine delle sezioni */
+.contenuto {
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 40px 20px 60px;
+}
+
+.contenuto h1 {
+  font-size: 2.2rem;
+  margin-bottom: 8px;
+}
+
+.sottotitolo {
+  color: #ff9a6c;
+  letter-spacing: 2px;
+  margin-bottom: 24px;
+}
+
+.immagine {
+  width: 100%;
+  max-height: 280px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 28px;
+}
+
+.contenuto h2 {
+  margin: 30px 0 12px;
+  color: #ffb08a;
+}
+
+/* Schede artisti */
+.artisti {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.artista {
+  background: #17172a;
+  border: 1px solid #2c2c45;
+  border-radius: 12px;
+  padding: 20px;
+  width: 270px;
+}
+
+.artista .foto {
+  font-size: 2.2rem;
+}
+
+.artista h3 {
+  margin: 8px 0 4px;
+}
+
+.artista .genere {
+  color: #ff7a45;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
+
+.artista p {
+  margin-top: 8px;
+  font-size: 0.92rem;
+  color: #b8b8cc;
+}
+
+/* Programma */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #17172a;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+caption {
+  text-align: left;
+  font-weight: bold;
+  font-size: 1.15rem;
+  color: #ffb08a;
+  padding: 14px 0 8px;
+}
+
+th,
+td {
+  padding: 12px 14px;
+  text-align: left;
+  border-bottom: 1px solid #2c2c45;
+  font-size: 0.95rem;
+}
+
+th {
+  background: #22223a;
+  color: #ffd9c9;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+/* Biglietti */
+.biglietti {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.biglietto {
+  background: #17172a;
+  border: 1px solid #2c2c45;
+  border-radius: 12px;
+  padding: 22px;
+  width: 260px;
+}
+
+.biglietto.destacato {
+  border-color: #ff7a45;
+}
+
+.biglietto h3 {
+  margin-bottom: 6px;
+}
+
+.prezzo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ff7a45;
+}
+
+.biglietto ul {
+  margin-top: 12px;
+  padding-left: 18px;
+  color: #b8b8cc;
+  font-size: 0.92rem;
+}
+
+.info {
+  background: #17172a;
+  border-left: 4px solid #ff7a45;
+  border-radius: 8px;
+  padding: 18px 20px;
+  margin-bottom: 16px;
+}
+
+.info h3 {
+  margin-bottom: 6px;
+}
+
+/* Link di ritorno e footer */
+.torna-home {
+  display: inline-block;
+  margin-top: 30px;
+  color: #ff7a45;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.torna-home:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background: #17172a;
+  text-align: center;
+  padding: 20px;
+  color: #8888a0;
+  font-size: 0.9rem;
+}
+</style>
+</head>
+<body>
+
+  <header>
+    <a class="logo" href="index.html">MUSIC <span>FESTIVAL</span></a>
+    <nav>
+      <a href="sezione-a.html">Artisti</a>
+      <a href="sezione-b.html">Programma</a>
+      <a href="sezione-c.html">Biglietti</a>
+    </nav>
+  </header>
+
+  <main class="contenuto">
+    <h1>Biglietti</h1>
+    <p class="sottotitolo">PREZZI E INFO</p>
+
+    <img class="immagine" src="img/biglietti.svg" alt="Illustrazione biglietti del festival">
+
+    <div class="biglietti">
+      <article class="biglietto">
+        <h3>Biglietto giornaliero</h3>
+        <p class="prezzo">&euro; 35</p>
+        <ul>
+          <li>Accesso per un giorno a scelta</li>
+          <li>Tutti e tre i palchi</li>
+        </ul>
+      </article>
+
+      <article class="biglietto destacato">
+        <h3>Abbonamento 3 giorni</h3>
+        <p class="prezzo">&euro; 80</p>
+        <ul>
+          <li>Accesso a tutti i giorni</li>
+          <li>Tutti e tre i palchi</li>
+          <li>Ingresso prioritario</li>
+        </ul>
+      </article>
+
+      <article class="biglietto">
+        <h3>VIP</h3>
+        <p class="prezzo">&euro; 150</p>
+        <ul>
+          <li>Abbonamento completo</li>
+          <li>Area riservata di fronte al palco</li>
+          <li>Drink di benvenuto</li>
+        </ul>
+      </article>
+    </div>
+
+    <div class="info">
+      <h3>Dove e quando</h3>
+      <p>Parco Civico di Busto Arsizio, dal 10 al 12 luglio 2026. Apertura porte ore 17:00.</p>
+    </div>
+
+    <div class="info">
+      <h3>Riduzioni</h3>
+      <p>Under 16: &euro; 15 (accompagnati da un adulto). Gruppi da 10 persone: 15% di sconto.</p>
+    </div>
+
+    <div class="info">
+      <h3>Contatti</h3>
+      <p>Info e assistenza: info@musicfestival.it &middot; Tel. 0331 000000</p>
+    </div>
+
+    <a class="torna-home" href="index.html">&larr; Torna alla home</a>
+  </main>
+
+  <footer>
+    Music Festival &copy; 2026 &mdash; Progetto gruppo 2 &middot; TPSIT 5AI
+  </footer>
+
+</body>
+</html>
